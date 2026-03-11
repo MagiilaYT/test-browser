@@ -1,0 +1,56 @@
+/* Proxy Browser Styles */
+
+/* Ensure full height layout */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Iframe styling */
+iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Smooth transitions for control bar */
+.control-bar {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Custom scrollbar for dropdown menus */
+.dropdown-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dropdown-scroll::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 3px;
+}
+
+.dropdown-scroll::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* Ensure dropdown menu items are clickable */
+[role="menuitem"] {
+  cursor: pointer;
+}
+
+/* Panic mode animation */
+@keyframes panicFlash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.panic-active {
+  animation: panicFlash 0.3s ease-in-out;
+}
